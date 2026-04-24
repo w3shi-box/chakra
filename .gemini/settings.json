@@ -1,0 +1,21 @@
+{
+  "experimental": {
+    "autoMemory": true
+  },
+  "hooks": {
+    "BeforeToolSelection": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "name": "chakra-init",
+            "type": "command",
+            "command": "bash $GEMINI_PROJECT_DIR/.gemini/hooks/initialize.sh",
+            "timeout": 5000,
+            "description": "Auto-initializes Chakra state before the agent picks a tool."
+          }
+        ]
+      }
+    ]
+  }
+}
